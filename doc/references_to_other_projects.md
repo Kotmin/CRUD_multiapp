@@ -26,3 +26,7 @@ https://stackoverflow.com/questions/18676156/how-to-properly-use-the-choices-fie
 ![obraz](https://user-images.githubusercontent.com/70173732/212901242-2648801d-4190-4228-af80-f29fb35585b4.png)
 
 ![obraz](https://user-images.githubusercontent.com/70173732/212902117-dcfafb03-ee01-4df9-b72c-9ef900f0062a.png)
+
+## I've ommited that part
+![obraz](https://user-images.githubusercontent.com/70173732/212903720-1c9c1001-1250-4023-a909-c9edab68f24e.png)
+
