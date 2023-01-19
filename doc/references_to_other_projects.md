@@ -30,3 +30,11 @@ https://stackoverflow.com/questions/18676156/how-to-properly-use-the-choices-fie
 ## I've ommited that part
 ![obraz](https://user-images.githubusercontent.com/70173732/212903720-1c9c1001-1250-4023-a909-c9edab68f24e.png)
 
+
+
+---
+## Project structure - templates
+
+https://stackoverflow.com/questions/1740436/what-is-the-best-location-to-put-templates-in-django-project
+
+![obraz](https://user-images.githubusercontent.com/70173732/213538091-60652e52-c38f-424e-8a34-86b1eaa33e5a.png)
