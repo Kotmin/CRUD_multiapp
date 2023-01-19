@@ -1,5 +1,22 @@
 {% load i18n %}
 
 <html>
-    <h1> {% translate "My list od things to do" %} </h1>
+    <h1> {% translate "My list of things to do" %} </h1>
+    <a href="{% url 'task-create' %}">{% translate "Add" %}</a>
+
+    <table>
+        <tr>
+            <th>{% translate "Your tasks" %}</th>
+            <th></th>
+        </tr>
+        {% for task in tasks %}
+        <!-- object_list by default-->
+        <tr>
+            <td>{{task.title}}</td>
+            <td><a href="{% url 'task' task.id %}">{% translate "Show" %}</a></td>
+        </tr>
+        {% empty %}
+            <h3>{% translate "Your list is empty" %}</h3>
+        {% endfor %}
+    </table>
 </html>

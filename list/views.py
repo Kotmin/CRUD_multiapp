@@ -3,6 +3,11 @@ from django.http import HttpResponse # just for debug purposes
 
 
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
+
+from django.urls import reverse_lazy
+
 from .models import Task
 
 #Auto translation part
@@ -23,5 +28,16 @@ def throw_HTTP(request):
 
 
 class TaskList(ListView):
+    model = Task # req model or query set
+    context_object_name = 'tasks'
+
+class TaskDetail(DetailView):
     model = Task
-    # req model or qury set
+    context_object_name = 'task'
+    template_name = 'list/task.html' # path lib!!!
+
+class TaskCreate(CreateView):
+    model = Task
+    fields = '__all__'# alt =['title','desc]
+    success_url = reverse_lazy('tasks')
+    
