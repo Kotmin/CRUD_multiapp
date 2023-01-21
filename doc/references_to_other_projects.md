@@ -80,3 +80,9 @@ https://stackoverflow.com/questions/2878983/capture-key-press-without-placing-an
 https://www.toptal.com/developers/keycode
 
 
+## Gain acces into enum
+
+https://stackoverflow.com/questions/52612525/using-if-condition-with-django-choice-field-in-templates
+
+## Conditionals
+https://docs.djangoproject.com/en/4.1/ref/models/conditional-expressions/
