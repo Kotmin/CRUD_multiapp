@@ -14,6 +14,8 @@
         <tr>
             <td>{{task.title}}</td>
             <td><a href="{% url 'task' task.id %}">{% translate "Show" %}</a></td>
+            <td><a href="{% url 'task-update' task.id %}">{% translate "Edit" %}</a></td>
+            <td><a href="{% url 'task-delete' task.id %}">{% translate "Delete" %}</a></td>
         </tr>
         {% empty %}
             <h3>{% translate "Your list is empty" %}</h3>
