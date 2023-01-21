@@ -24,13 +24,29 @@
 </head>
 
 <body>
-    <div>
+    <!-- <div>
         <button onclick="myMessage()">Click me!</button>
+    </div> -->
+
+    <div class="theme_toogle">
+            
+        <input type="checkbox" class="checkbox_swype" id="night_theme_toogle" aria-hidden="true" >
+        <label for="night_theme_toogle" class="label_toogle">
+            <i class="sun"></i>
+            <i class="moon"></i>
+            
+            <i class="ball"></i>
+
+        </label>
     </div>
+
+
     <div class="container" lang="en">
         {% block content %}
 
         {% endblock content %}
     </div>
+
+    <script src="{% static 'list/js/functions.js' %}"></script>
 </body>
 </html>
