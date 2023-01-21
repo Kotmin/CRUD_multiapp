@@ -8,6 +8,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.urls import reverse_lazy
 
+from django.contrib.auth.views import LoginView
+
 from .models import Task
 
 #Auto translation part
@@ -26,6 +28,15 @@ def throw_HTTP(request):
     output = _("Your todo list")
     return HttpResponse(output)
 
+
+
+class CustomLoginView(LoginView):
+    template_name = 'list/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self) -> str:
+        return reverse_lazy('tasks')
 
 class TaskList(ListView):
     model = Task # req model or query set
