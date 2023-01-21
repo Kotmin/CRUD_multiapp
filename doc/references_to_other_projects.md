@@ -38,3 +38,6 @@ https://stackoverflow.com/questions/18676156/how-to-properly-use-the-choices-fie
 https://stackoverflow.com/questions/1740436/what-is-the-best-location-to-put-templates-in-django-project
 
 ![obraz](https://user-images.githubusercontent.com/70173732/213538091-60652e52-c38f-424e-8a34-86b1eaa33e5a.png)
+
+
+## Validation in django framework
