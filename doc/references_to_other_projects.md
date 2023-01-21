@@ -42,7 +42,11 @@ https://stackoverflow.com/questions/1740436/what-is-the-best-location-to-put-tem
 
 ## Validation in django framework
 It's to long story for this project
+https://docs.djangoproject.com/en/4.1/ref/validators/
 
 ## Static file deploument
 
 https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/
+
+https://www.w3schools.com/django/django_add_js_file_global.php
+## 
