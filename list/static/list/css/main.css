@@ -27,7 +27,7 @@ body {
     padding:0;
     margin:0;
     box-sizing: border-box;
-    text-decoration: none;
+    /* text-decoration: none; */
     
     
 }
@@ -65,6 +65,13 @@ p
     background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
 
 }
+
+
+.header-bar a {
+    text-decoration: none;
+}
+
+
 
 /* nav{
     display: flex;

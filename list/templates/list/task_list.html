@@ -27,31 +27,55 @@
     <hr>
 
 
-    <h1> {% translate "My list of things to do" %} </h1>
-    <a href="{% url 'task-create' %}">{% translate "Add" %}</a>
+  <h1> {% translate "My list of things to do" %} </h1>
+    <a href="{% url 'task-create' %}">{% translate "Add" %}</a> 
 
     {% translate "Search" as the_search_input %}
     <form>
         <input type='text' name="search-area" value="{{search_input}}">
         <input type="submit" value="{{the_search_input}}" >
-    </form>
+    </form> 
 
-    <table>
-        <tr>
-            <th>{% translate "Your tasks" %}</th>
-            <th></th>
-        </tr>
+<!-- underlined - suspended
+normal - active
+crossed - completed
+ignored - deleted -->
+
+
+    <div class="list-items-wrapper">
         {% for task in tasks %}
-        <!-- object_list by default-->
-        <tr>
-            <td>{{task.title}}</td>
-            <!-- <td><a href="{% url 'task' task.id %}">{% translate "Show" %}</a></td> -->
-            <td><a href="{% url 'task-update' task.id %}">{% translate "Edit" %}</a></td>
-            <td><a href="{% url 'task-delete' task.id %}">{% translate "Delete" %}</a></td>
-        </tr>
-        {% empty %}
-            <h3>{% translate "Your list is empty" %}</h3>
-        {% endfor %}
-    </table>
+        <div class="item-wrapper">
+            {% if task.state == '0' %}
 
+            {% else %}
+                {% if task.state == '2' %}
+                <div class="item-title">
+                    <div class="item-complete-icon"></div>
+                     <s> <a href="{% url 'task-update' task.id %}"> {{task}} </a></s>
+                </div>
+                
+                {% else %}
+                    {% if task.state == '3' %}
+                    <div class="item-title">
+                        <div class="item-incomplete-icon"></div>
+                        <ins style="background-color: rgba(211, 211, 211, 0.649);border-radius: 10%;"><a href="{% url 'task-update' task.id %}">{{task}}</a></ins>
+                    </div>
+                    
+                    {% else %}
+                    <div class="item-title">
+                        <div class="item-incomplete-icon"></div>
+                        <a href="{% url 'task-update' task.id %}">{{task}}</a>
+                    </div>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        </div>
+
+        {% empty %}
+        <h3>{% translate "Your list is empty" %}</h3>
+    {% endfor %}
+
+    </div>
+
+    
 {% endblock content %}
