@@ -53,3 +53,7 @@ https://www.w3schools.com/django/django_add_js_file_global.php
 ## Shortcuts into mvc
 https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/
 
+## Keyboard shortcuts handleing
+
+https://www.youtube.com/watch?v=lNJMDTSkNXo
+
