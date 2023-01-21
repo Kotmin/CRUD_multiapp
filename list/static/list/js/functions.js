@@ -8,7 +8,25 @@ let darkMode = localStorage.getItem("dark");
 
 
 
+document.addEventListener("keydown", e=>{
+  e.preventDefault();
+  if (e.key.toLowerCase() === "u"
+      // && e.ctrlKey //to make combo and change it to ctrl+u
+  
+  ){
+    alert("U has been pressed");
+  }
+})
 
+
+document.addEventListener("keydown", e=>{
+  e.preventDefault();
+  if (e.key.toLowerCase() === "m"
+  
+  ){
+    document.getElementById('night_theme_toogle').click();
+  }
+})
 
 const enableDarkMode = () => {
   document.documentElement.setAttribute("data-theme","dark");
