@@ -67,3 +67,16 @@ https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascri
 ![obraz](https://user-images.githubusercontent.com/70173732/213884536-2ee5cdb0-994d-4d73-b076-8458d509149c.png)
 
 
+
+## Fixed keyboard shortcuts
+
+
+![[Pasted image 20230121210426.png]]
+https://stackoverflow.com/questions/2878983/capture-key-press-without-placing-an-input-element-on-the-page
+
+
+## Keycodes
+
+https://www.toptal.com/developers/keycode
+
+
