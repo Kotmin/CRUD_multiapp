@@ -67,11 +67,15 @@ class TaskList(LoginRequiredMixin,ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['tasks'] = context['tasks'].filter(user=self.request.user)
-        def n_deleted(x):
-            if x==0:
-                return False
-            return True
+
         # context['count'] = context['tasks'].filter(status=1).count()
+        search_input = self.request.GET.get('search-area') or ''
+        if search_input:
+            context['tasks'] = context['tasks'].filter(
+                title__icontains=search_input
+            )
+
+        context['search_imput'] = search_input
         return context
 
 class TaskDetail(DetailView):

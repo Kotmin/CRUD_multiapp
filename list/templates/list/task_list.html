@@ -1,6 +1,15 @@
+{% extends 'list/main_template.html' %}
+
 {% load i18n %}
 
-<html>
+
+
+
+{% block content %}
+
+
+
+
     {% if request.user.is_authenticated %}
     <p>{% translate "Hello" %}  {{request.user}}</p>
     <a href="{% url 'logout' %}">{% translate "Logout" %}</a>
@@ -14,6 +23,12 @@
     <h1> {% translate "My list of things to do" %} </h1>
     <a href="{% url 'task-create' %}">{% translate "Add" %}</a>
 
+    {% translate "Search" as the_search_input %}
+    <form>
+        <input type='text' name="search-area" value="{{search_input}}">
+        <input type="submit" value="{{the_search_input}}" >
+    </form>
+
     <table>
         <tr>
             <th>{% translate "Your tasks" %}</th>
@@ -23,7 +38,7 @@
         <!-- object_list by default-->
         <tr>
             <td>{{task.title}}</td>
-            <td><a href="{% url 'task' task.id %}">{% translate "Show" %}</a></td>
+            <!-- <td><a href="{% url 'task' task.id %}">{% translate "Show" %}</a></td> -->
             <td><a href="{% url 'task-update' task.id %}">{% translate "Edit" %}</a></td>
             <td><a href="{% url 'task-delete' task.id %}">{% translate "Delete" %}</a></td>
         </tr>
@@ -31,4 +46,5 @@
             <h3>{% translate "Your list is empty" %}</h3>
         {% endfor %}
     </table>
-</html>
+
+{% endblock content %}

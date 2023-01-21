@@ -1,4 +1,11 @@
+{% extends 'list/main_template.html' %}
+
 {% load i18n %}
+
+
+
+
+{% block content %}
 
 <html>
     <h1>{% translate "Register" %}</h1>
@@ -10,3 +17,5 @@
 
     <p>{% translate "Already have an account?" %} <a href="{% url 'login' %}"> {% translate "Login." %} </a></p>
 </html> 
+
+{% endblock content %}
