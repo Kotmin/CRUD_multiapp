@@ -57,3 +57,13 @@ https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/
 
 https://www.youtube.com/watch?v=lNJMDTSkNXo
 
+![obraz](https://user-images.githubusercontent.com/70173732/213884502-3aa9ebb2-1af5-4c18-bd81-41f86669bfe7.png)
+
+
+https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript
+
+![obraz](https://user-images.githubusercontent.com/70173732/213884526-9da0ebd5-500d-4ff4-ba64-026465003f34.png)
+
+![obraz](https://user-images.githubusercontent.com/70173732/213884536-2ee5cdb0-994d-4d73-b076-8458d509149c.png)
+
+
