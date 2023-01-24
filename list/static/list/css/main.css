@@ -2,7 +2,7 @@
 :root {
     --background-color: #fff;
     --text-color: #000; 
-    font-size: 62.5%;
+    
     /*Z tym fontsize jest fajna sztuczka bo statystycznie najczesciej mamy fontsize 60 i to nam sie bedzie skalowalo ladnie*/
 }
 
@@ -37,7 +37,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6
 {
     font-family: 'Raleway', sans-serif;
 }
@@ -70,30 +70,6 @@ p
 .header-bar a {
     text-decoration: none;
 }
-
-
-
-/* nav{
-    display: flex;
-    justify-content: space-around;
-    min-height: 8vh;
-    
-    
-    background: #080C12;
-    color: #eae0c8;
-    
-    
-    align-items: center;
-    list-style: none;
-    
-}
-
-label.logo{
-    font-size: 35px;
-    font-weight: bold;
-    color: whitesmoke;
-} */
-
 
 
 /*Zabawa z jasno-ciemno*/
