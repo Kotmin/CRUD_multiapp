@@ -102,3 +102,6 @@ https://stackoverflow.com/questions/19223092/how-to-customize-userregistration-f
 
 https://docs.djangoproject.com/en/4.1/topics/class-based-views/generic-editing/
 
+## First clear explanation of FormView
+
+https://www.agiliq.com/blog/2019/01/django-formview/
