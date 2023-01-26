@@ -86,3 +86,10 @@ https://stackoverflow.com/questions/52612525/using-if-condition-with-django-choi
 
 ## Conditionals
 https://docs.djangoproject.com/en/4.1/ref/models/conditional-expressions/
+
+## How does form should look like
+
+https://www.youtube.com/watch?v=j5ejoA5eenQ
+
+---
+
