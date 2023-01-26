@@ -22,7 +22,7 @@ In short it should transform into Microservices app
 ---
 
 ## Final command should look like:
-'''
+```
 git clone git@github.com:Kotmin/CRUD_multiapp.git
 
-'''
+```
