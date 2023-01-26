@@ -93,3 +93,9 @@ https://www.youtube.com/watch?v=j5ejoA5eenQ
 
 ---
 
+## Customization of default django views
+
+https://stackoverflow.com/questions/19223092/how-to-customize-userregistration-form-of-django
+
+---
+
