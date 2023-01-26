@@ -13,6 +13,7 @@ In short it should transform into Microservices app
 
 ## How to run in DEBUG mode.
 
+
 ### To download the project directly from Github:
 
 ---
