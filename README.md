@@ -18,7 +18,7 @@ In short it should transform into Microservices app
 ![obraz](https://user-images.githubusercontent.com/70173732/214968592-b5b5d996-ae6c-468b-8507-c6d76c831f3d.png)
 
 3. Paste it into terminal window after "git clone" 
-#### Shhh. Remember that you need to press ctrl+l_shift+v to paste it into regular terminal
+#### Shhh. Remember that you need to press ctrl+l_shift+v to paste it into regular terminal. Or something like this
 ---
 
 ## Final command should look like:
@@ -44,6 +44,8 @@ Sometimes the path should be slightly different like venv/Scripts/activate
 
 Right now name of our env should appear
 ![obraz](https://user-images.githubusercontent.com/70173732/214974119-eb83b9fb-9bcb-44ec-b256-19d172491aeb.png)
+
+Congratulation you're working now in semi-separated environment. Hmmmm you don't have any strong separation sooo be carefull. Just read the docs what that exactly is. And the most important part. Have Fun!
 
 ## To exit 
 ```
