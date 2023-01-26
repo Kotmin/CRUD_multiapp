@@ -24,5 +24,9 @@ In short it should transform into Microservices app
 ## Final command should look like:
 ```
 git clone git@github.com:Kotmin/CRUD_multiapp.git
-
 ```
+
+
+## Project requirements
+- Python3 at least 3.6
+- Django version 3.2.16
