@@ -26,6 +26,33 @@ In short it should transform into Microservices app
 git clone git@github.com:Kotmin/CRUD_multiapp.git
 ```
 
+## We highly recoment do use for this purpose an virtual environment python
+### Python has two main virtual env managers: venv and conda. We'll focus at first one.
+## To create simple venv
+
+Just run
+```
+python -m venv
+```
+## To log in into (pattern "source ENVName/bin/activate")
+For us that should be
+```
+source venv/bin/activate
+
+```
+Sometimes the path should be slightly different like venv/Scripts/activate
+
+Right now name of our env should appear
+![obraz](https://user-images.githubusercontent.com/70173732/214974119-eb83b9fb-9bcb-44ec-b256-19d172491aeb.png)
+
+## To exit 
+```
+deactivate
+```
+
+
+
+
 
 ## Project requirements
 - Python3 at least 3.6
