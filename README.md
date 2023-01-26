@@ -4,6 +4,13 @@ Project created to develop skills in the field of django framework, docker, app 
 In short it should transform into Microservices app
 
 
+## Project requirements
+- Python3 at least 3.6
+- Django version 3.2.16
+
+
+
+
 ## How to run in DEBUG mode.
 
 ### To download the project directly from Github:
@@ -53,9 +60,25 @@ deactivate
 ```
 
 
+---
+
+### We need proper versions of external libraries 
+
+## Pip install specific versions of multiple packages:
+```
+pip install -r ./requirements.txt
+
+```
+
+## Initialisation new database (i leaved default database, soo if you are not going to change now, at first time you should run this command)
+
+```
+python manage.py migrate
+```
+
+## For running whole project type
+```
+python manage.py runserver
+```
 
 
-
-## Project requirements
-- Python3 at least 3.6
-- Django version 3.2.16
