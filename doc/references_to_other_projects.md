@@ -105,3 +105,8 @@ https://docs.djangoproject.com/en/4.1/topics/class-based-views/generic-editing/
 ## First clear explanation of FormView
 
 https://www.agiliq.com/blog/2019/01/django-formview/
+
+## Multiple databases
+
+https://www.youtube.com/watch?v=g-FCzzzjBWo
+
