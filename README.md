@@ -33,7 +33,7 @@ In short it should transform into Microservices app
 git clone git@github.com:Kotmin/CRUD_multiapp.git
 ```
 
-## We highly recoment do use for this purpose an virtual environment python
+## We highly recomend do use for this purpose an virtual environment python
 ### Python has two main virtual env managers: venv and conda. We'll focus at first one.
 ## To create simple venv
 
