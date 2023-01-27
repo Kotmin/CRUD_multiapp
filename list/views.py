@@ -16,6 +16,8 @@ from django.contrib.auth import login
 
 from .models import Task
 
+from django import forms
+
 #Auto translation part
 from django.utils.translation import gettext as _
 
@@ -48,6 +50,7 @@ class RegisterPage(FormView):
     form_class = UserCreationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('tasks')
+    email = forms.EmailField()
 
     def form_valid(self,form):
         user = form.save()

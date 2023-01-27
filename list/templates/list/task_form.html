@@ -8,15 +8,18 @@
 {% block content %}
 
 
-<html>
+
     <h3>Task form</h3>
     <a href="{% url 'tasks' %}">{% translate "Return" %}</a>
     <form method="POST" action="">
         {% csrf_token %}
         <!-- CrossSite Forgery to nie tutaj-->
+        
         {{form.as_p}}
+        <label for="title">Title y</label>
+        <input name="title" id="title" required />
         <input type="submit" value="Submit">
     </form>
-</html> 
+
 
 {% endblock content %}

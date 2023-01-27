@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<html>
+
     <h1>{% translate "Register" %}</h1>
     <form method="POST">
         {% csrf_token %}
@@ -16,6 +16,6 @@
     </form>
 
     <p>{% translate "Already have an account?" %} <a href="{% url 'login' %}"> {% translate "Login." %} </a></p>
-</html> 
+
 
 {% endblock content %}

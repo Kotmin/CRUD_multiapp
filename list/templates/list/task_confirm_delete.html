@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<html>
+
     
     <a href="{% url 'tasks' %}">{% translate "Return" %}</a>
     <form method="POST">
@@ -16,6 +16,6 @@
         <p>{% translate "Are you sure you want to delete this item?" %} "{{task}}" </p>
         <input type="submit" value="Delete">
     </form>
-</html> 
+
 
 {% endblock content %}

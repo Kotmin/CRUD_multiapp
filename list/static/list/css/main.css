@@ -3,7 +3,6 @@
     --background-color: #fff;
     --text-color: #000; 
     
-    /*Z tym fontsize jest fajna sztuczka bo statystycznie najczesciej mamy fontsize 60 i to nam sie bedzie skalowalo ladnie*/
 }
 
 [data-theme="dark"] {
