@@ -110,3 +110,9 @@ https://www.agiliq.com/blog/2019/01/django-formview/
 
 https://www.youtube.com/watch?v=g-FCzzzjBWo
 
+
+## Connect to MariaDB
+
+https://stackoverflow.com/questions/28068155/access-denied-for-user-rootlocalhost-using-password-yes-after-new-instal
+![obraz](https://user-images.githubusercontent.com/70173732/214982980-427854b7-b3eb-47f4-b938-30471d0c7cb4.png)
+
