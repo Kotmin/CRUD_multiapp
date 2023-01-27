@@ -35,7 +35,7 @@ git clone git@github.com:Kotmin/CRUD_multiapp.git
 ```
 
 ## We highly recomend do use for this purpose an virtual environment python
-### Python has two main virtual env managers: venv and conda. We'll focus at first one.
+### Python has two main virtual env managers: venv and conda. We'll focus at the first one.
 ## To create simple venv
 
 Just run
@@ -71,7 +71,7 @@ pip install -r ./requirements.txt
 
 ```
 
-## Initialisation new database (i leaved default database, soo if you are not going to change now, at first time you should run this command)
+## Initialisation of new database (I've leave default database setting, so if you are not going to change it immediately you shall run this command)
 
 ```
 python manage.py migrate
