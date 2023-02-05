@@ -46,6 +46,15 @@ def testing(request):
     }
     return HttpResponse(template.render(context,request))
 
+def game(request,pk):
+    mymember = Task.objects.get(id=pk)
+    template = loader.get_template('list/game.html')
+
+    context = {
+        'mymember': mymember,
+    }
+    return HttpResponse(template.render(context,request))
+
 # end of debbuging part
 
 class CustomLoginView(LoginView):
