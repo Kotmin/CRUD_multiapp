@@ -9,4 +9,22 @@
     <!-- object by default instead of "task"-->
 
 
+    <h3>Task form</h3>
+    <a href="{% url 'tasks' %}">{% translate "Return" %}</a>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <!-- CrossSite Forgery to nie tutaj-->
+        
+        
+        <label for="title">Title y</label>
+        <input name="title" id="title" value="{{ task.title }}" min="0" max="128" required />
+
+
+        <label for="description"> Description </label>
+        <input id="description" name="description" value="{{ task.description }}" min="0" max="500">
+
+        </input>
+
+        <input type="submit" value="Submit">
+    </form>
 {% endblock content %}

@@ -14,6 +14,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 
+from django.views import View
+
 from .models import Task
 
 from django import forms
@@ -21,7 +23,8 @@ from django import forms
 #Auto translation part
 from django.utils.translation import gettext as _
 
-
+#debugging
+from django.template import loader
 
 # Create your views here.
 
@@ -35,6 +38,15 @@ def throw_HTTP(request):
     return HttpResponse(output)
 
 
+def testing(request):
+    mydata = Task.objects.all()
+    template = loader.get_template('list/template.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context,request))
+
+# end of debbuging part
 
 class CustomLoginView(LoginView):
     template_name = 'list/login.html'
@@ -94,11 +106,30 @@ class TaskCreate(LoginRequiredMixin,CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(TaskCreate,self).form_valid(form)
-    
+ # tu jest nasz rodzynek do zamiany   
+
 class TaskUpdate(LoginRequiredMixin,UpdateView):
     model = Task
     fields = '__all__'
     success_url = reverse_lazy('tasks')
+
+# class TaskUpdate(LoginRequiredMixin,View):
+#     model = Task
+#     success_url = reverse_lazy('tasks')
+#     def get(self, request,pk):
+#         task = Task.objects.get(id=pk)
+#         context = {'task':task}
+#         return render(request , 'list/task.html',context)
+
+#     def post(self,request, pk):
+#         task = Task.objects.get(id=pk)
+#         task.body = request.POST.get('body')
+#         task.save()
+#         return redirect('tasks')
+
+
+
+
 
 
 class TaskDelete(LoginRequiredMixin,DeleteView):
