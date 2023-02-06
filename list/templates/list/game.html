@@ -1,18 +1,14 @@
+{% extends 'list/main_template.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    
-</head>
-<body>
+
+
+{% block content %}
+<div class="header-bar">
     <h1> {{ mymember.title }}</h1>
-    <p> {{ mymember.description }} </p>
     <br>
+    
+</div>
+<p> {{ mymember.description }} </p>
     <p> {{ game_var }} </p>
     <div class="content">
         <input type="text" class="typing-input" maxlength="1">
@@ -25,5 +21,4 @@
 
 
         <script src="{% static 'list/js/type_game.js' %}"></script>
-</body>
-</html>
+{% endblock content %}
