@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    
 </head>
 <body>
     <h1> {{ mymember.title }}</h1>
     <p> {{ mymember.description }} </p>
+    <br>
+    <p> {{ game_var }} </p>
+    <div class="content">
+        <input type="text" class="typing-input" maxlength="1">
+        <div class="inputs"></div>
+
+        <button class="reset-btn">Reset Game</button>
+    </div>
 
         <p> Return to <a href="{% url 'tasks' %}"> list </a></p>
+
+
+        <script src="{% static 'list/js/type_game.js' %}"></script>
 </body>
 </html>

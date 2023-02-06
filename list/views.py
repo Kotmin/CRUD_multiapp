@@ -50,8 +50,10 @@ def game(request,pk):
     mymember = Task.objects.get(id=pk)
     template = loader.get_template('list/game.html')
 
+    hidden_text = mymember.description
     context = {
         'mymember': mymember,
+        'game_var': hidden_text,
     }
     return HttpResponse(template.render(context,request))
 
