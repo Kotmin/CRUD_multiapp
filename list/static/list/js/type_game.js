@@ -3,29 +3,21 @@
 
 const inputs = document.querySelector(".inputs"),
 resetBtn = document.querySelector(".reset-btn"),
+gameBoard = document.querySelector(".board"),
 orginalTask = document.querySelector(".result"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letters span"),
 typingInput = document.querySelector(".typing-input");
 
  
-
-let text = "Ala ma kota, ale nie ma żółwia.";
+let input_text= "Ala ma kota, ale nie ma żółwia.";
+let text = ""
 // text = "ala";
 
-let working_text = text.split(' ');
-
-console.log(working_text);
-
-console.log(working_text[0]);
-
-console.log(working_text[1]);
-
-console.log(working_text[2]);
-
-
+let working_text = input_text.split(' ');
 
 let incorrects = [];
+let corrects = [];
 
 
 let maxGuesses = 10;
@@ -34,7 +26,9 @@ let howManyHidden = 3,
 randomIndex = [],
 temp ="",
 randomIntHolder=0,
-i=0;
+i=0,
+actualBoard = [],
+iteration = 0;
 
 
 
@@ -42,7 +36,19 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+function generateHashedWordReplacement(word){
+    temp =""
+    for (let i = 0; i < word.length; i++) {
+        temp +="_";
+    }
+    return temp;
+}
+
 function prepareBoard(){
+    iteration=0;
+    if (working_text.length<3) {
+        howManyHidden = (working_text.length-1) ;
+    }
     while(i<howManyHidden) {
         randomIntHolder=getRandomInt(working_text.length);
         if (working_text[randomIntHolder].includes("/[,;.]/g") || randomIndex.includes(randomIntHolder)) {
@@ -51,22 +57,53 @@ function prepareBoard(){
         randomIndex.push(randomIntHolder);
         i++;
     }
-
+    for (i = 0; i < working_text.length; i++) {
+        if (randomIndex.includes(i)) {
+            actualBoard.push(generateHashedWordReplacement(working_text[i]));
+        }
+        else{
+            actualBoard.push(working_text[i])
+        }   
+    }     
 }
 console.log(randomIndex);
-prepareBoard();
+console.log(actualBoard);
+
 
 function showBoard(){
-
+    let board ="";
+    console.log(actualBoard);
+    for (let i = 0; i < actualBoard.length; i++) {
+        board += actualBoard[i] + " ";
+    }
+    gameBoard.innerText = board;
 }
 
 function showOrginal(){
-    orginalTask.innerText = text;
+    orginalTask.innerText = input_text;
+}
+
+function updateBoard(){
+    if(howManyHidden<1){
+        showOrginal();
+        actualBoard[randomIndex[iteration]]=working_text[randomIndex[iteration]];
+        showBoard();
+    }
+    else{
+        actualBoard[randomIndex[iteration]]=working_text[randomIndex[iteration]];
+        iteration++;
+        showBoard();
+        text=working_text[randomIndex[iteration]];
+        randomText();
+    }
+
 }
 
 function randomText(){
 
     guessLeft.innerText = maxGuesses;
+    incorrects = [];
+    corrects = [];
 
     let html ="";
     for(let i = 0; i< text.length;i++){
@@ -75,17 +112,22 @@ function randomText(){
     inputs.innerHTML = html;
     
 }
+prepareBoard();
+showBoard();
 
 randomText();
+// showOrginal(); fine
 
 
 function initGame(e) {
     let key = e.target.value;
-    if(key.match(/^[A-Za-z0-9;\.\,]+$/) && !incorrects.includes(` ${key}`)){
+    if(key.match(/^[A-Za-z0-9żźćńłą;\.\,]+$/) && !incorrects.includes(` ${key}`)
+    && !corrects.includes(key)){
         console.log(key);
         if(text.includes(key)) {
             for (let i = 0; i < text.length; i++) {
                 if (text[i] === key) {
+                    corrects.push(key);
                     inputs.querySelectorAll("input")[i].value = key;
                 }
             }
@@ -99,15 +141,23 @@ function initGame(e) {
         wrongLetter.innerText = incorrects;
     }
     typingInput.value ="" ;
-
+    if (corrects.length === text.length) {
+        //congrats you did it
+        howManyHidden--;
+        updateBoard();
+        
+    }
     if (maxGuesses < 1) {
         for (let i = 0; i < text.length; i++) {
             inputs.querySelectorAll("input")[i].value = text[i];
+            howManyHidden--;
+            updateBoard();
         }
-        showOrginal();
     }
 }
-//16:15 v
+
+
+
 resetBtn.addEventListener("click",randomText);
 // alert(title);
 
