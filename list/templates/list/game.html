@@ -11,10 +11,14 @@
 <p> {{ mymember.description }} </p>
     <p> {{ game_var }} </p>
     <div class="content">
+        <div class ="board"></div>
         <input type="text" class="typing-input" maxlength="1">
         <div class="inputs"></div>
+        <p class="guess-left">Remaining Guesses:<span></span></p>
+        <p class="wrong-letters">Wrong letters:<span></span></p>
 
         <button class="reset-btn">Reset Game</button>
+        <div class ="result"></div>
     </div>
 
         <p> Return to <a href="{% url 'tasks' %}"> list </a></p>
