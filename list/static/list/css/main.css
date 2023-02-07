@@ -71,6 +71,20 @@ p
 }
 
 
+/* Zarzadzanie taskami */
+
+.item-title ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.item-title li a{
+    display: block;
+}
+
+
 /*Zabawa z jasno-ciemno*/
 
 .label_toogle {

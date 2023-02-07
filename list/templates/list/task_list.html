@@ -47,9 +47,19 @@ ignored - deleted -->
 
             {% else %}
                 {% if task.state == '2' %}
-                <div class="item-title">
+                <!-- <div class="item-title">
                     <div class="item-complete-icon"></div>
                      <s> <a href="{% url 'task-update' task.id %}"> {{task}} </a></s>
+                </div> -->
+
+                <div class="item-title">
+                    <div class="item-complete-icon"></div>
+                     <!-- <s>  -->
+                        <ul>
+                         <li><a href="{% url 'task-update' task.id %}"> {{task}} </a></li>
+                         <li><a href="{% url 'game' task.id %}"> Memo </a></li>
+                        </ul>
+                    <!-- </s> -->
                 </div>
                 
                 {% else %}

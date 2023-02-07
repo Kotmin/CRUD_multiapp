@@ -112,6 +112,26 @@ function randomText(){
     inputs.innerHTML = html;
     
 }
+
+function restart(){
+    incorrects = [];
+    corrects = [];
+    maxGuesses = 10;
+
+    howManyHidden = 3,
+    randomIndex = [],
+    temp ="",
+    randomIntHolder=0,
+    i=0,
+    actualBoard = [],
+    iteration = 0;
+
+    prepareBoard();
+    showBoard();
+
+    randomText();
+}
+
 prepareBoard();
 showBoard();
 
@@ -158,7 +178,7 @@ function initGame(e) {
 
 
 
-resetBtn.addEventListener("click",randomText);
+resetBtn.addEventListener("click",restart);
 // alert(title);
 
 typingInput.addEventListener("input", initGame);
