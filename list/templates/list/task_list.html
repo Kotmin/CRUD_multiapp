@@ -57,7 +57,7 @@ ignored - deleted -->
                      <!-- <s>  -->
                         <ul>
                          <li><a href="{% url 'task-update' task.id %}"> {{task}} </a></li>
-                         <li><a href="{% url 'game' task.id %}"> Memo </a></li>
+                         <!-- <li><a href="{% url 'game' task.id %}"> Memo </a></li> -->
                         </ul>
                     <!-- </s> -->
                 </div>
@@ -72,7 +72,10 @@ ignored - deleted -->
                     {% else %}
                     <div class="item-title">
                         <div class="item-incomplete-icon"></div>
-                        <a href="{% url 'task-update' task.id %}">{{task}}</a>
+                        <ul>
+                            <li><a href="{% url 'task-update' task.id %}"> {{task}} </a></li>
+                            <li><a href="{% url 'game' task.id %}" > Memo </a></li>
+                           </ul>
                     </div>
                     {% endif %}
                 {% endif %}
