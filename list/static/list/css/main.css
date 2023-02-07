@@ -84,6 +84,19 @@ p
     display: block;
 }
 
+/* typing-input-background */
+
+.typing-input-background {
+    background-color: var(--background-color);
+
+    border-radius: 25px;
+    /* border: 2px solid #73AD21; */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 20px;
+    transition: opacity 2s;
+}
+
 
 /*Zabawa z jasno-ciemno*/
 

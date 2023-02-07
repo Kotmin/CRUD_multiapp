@@ -13,12 +13,15 @@
     <br>
     
 </div>
-<p> {{ mymember.description }} </p>
-    <p> {{ game_var }} </p>
+<!-- <p> {{ mymember.description }} </p> -->
+    <!-- <p> {{ game_var }} </p> -->
     <div class="content">
+        <p><a href="{% url 'tasks' %}"> Return </a></p>
         <div class ="board"></div>
         <input type="text" class="typing-input" maxlength="1">
-        <div class="inputs"></div>
+        <div id="typo1" class ="typing-input-background">
+            <div class="inputs"></div>
+        </div>
         <p class="guess-left">Remaining Guesses:<span></span></p>
         <p class="wrong-letters">Wrong letters:<span></span></p>
 
@@ -26,7 +29,7 @@
         <div class ="result"></div>
     </div>
 
-        <p> Return to <a href="{% url 'tasks' %}"> list </a></p>
+        
 
 
         <script src="{% static 'list/js/type_game.js' %}"></script>

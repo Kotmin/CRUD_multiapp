@@ -2,6 +2,7 @@
 // const title = localStorage.getItem('hidden_text');
 
 const inputs = document.querySelector(".inputs"),
+input_background = document.getElementById("typo1"),
 resetBtn = document.querySelector(".reset-btn"),
 gameBoard = document.querySelector(".board"),
 orginalTask = document.querySelector(".result"),
@@ -33,6 +34,22 @@ actualBoard = [],
 iteration = 0;
 
 // alert(plain_text);
+
+
+function fadeInCorrect() {
+    input_background.style.background = "#009879";
+    input_background.style.opacity = '1';
+}
+
+
+function fadeInWrong(){
+    input_background.style.background = "#FF0000";
+    input_background.style.opacity = '1';
+}
+
+function fadeOut(){
+    input_background.style.opacity = '0';
+}
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -109,10 +126,7 @@ function randomText(){
 
     let html ="";
     for(let i = 0; i< text.length;i++){
-
-=======
         html +=`<input type="text" style="width: 1.5em" disabled>`;
->>>>>>> 4c44fcfff3792f3451f7f9aa819f991da1a739bf
     }
     inputs.innerHTML = html;
     
@@ -169,12 +183,15 @@ function initGame(e) {
     if (corrects.length === text.length) {
         //congrats you did it
         howManyHidden--;
+        fadeInCorrect();
+        // fadeOut;
         updateBoard();
         
     }
     if (maxGuesses < 1) {
         for (let i = 0; i < text.length; i++) {
             inputs.querySelectorAll("input")[i].value = text[i];
+            fadeInWrong();
             howManyHidden--;
             updateBoard();
         }
