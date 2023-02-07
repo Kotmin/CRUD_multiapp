@@ -9,8 +9,10 @@ guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letters span"),
 typingInput = document.querySelector(".typing-input");
 
- 
-let input_text= "Ala ma kota, ale nie ma żółwia.";
+//  Just for testing purposes
+// let input_text= "Ala ma kota, ale nie ma żółwia.";
+
+let input_text = plain_text;
 let text = ""
 // text = "ala";
 
@@ -30,7 +32,7 @@ i=0,
 actualBoard = [],
 iteration = 0;
 
-
+// alert(plain_text);
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
