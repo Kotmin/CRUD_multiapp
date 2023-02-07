@@ -109,7 +109,10 @@ function randomText(){
 
     let html ="";
     for(let i = 0; i< text.length;i++){
-        html +=`<input type="text" style="width: 15em" disabled>`;
+
+=======
+        html +=`<input type="text" style="width: 1.5em" disabled>`;
+>>>>>>> 4c44fcfff3792f3451f7f9aa819f991da1a739bf
     }
     inputs.innerHTML = html;
     
